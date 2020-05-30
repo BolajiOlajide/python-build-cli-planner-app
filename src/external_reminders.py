@@ -18,7 +18,7 @@ class DateTimeReminder(Iterable):
                      self.time.strftime('%I:%M %p')])
 
     def is_due(self):
-        return self.date < datetime.now()
+        return self.date <= datetime.now()
 
 
 class MorningReminder(DateTimeReminder):
